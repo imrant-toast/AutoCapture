@@ -64,6 +64,11 @@ extension ScanBotScanningController: SBSDKDocumentScannerViewControllerDelegate 
                                        didSnapDocumentImage documentImage: UIImage,
                                        on originalImage: UIImage,
                                        with result: SBSDKDocumentDetectorResult, autoSnapped: Bool) {
+        if autoSnapped {
+            // caputured from auto capture
+        } else {
+            // manual capture.
+        }
         // moving to review controller
         if let polycon = result.polygon {
             guard Scanbot.isLicenseValid() else {
