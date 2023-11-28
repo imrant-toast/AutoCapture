@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Scan Bot Scanning Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="ScanBotScanningController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" customClass="ScanBotScanningController" customModule="AutoCaptureScanner" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OmE-Vk-hVX">
+                                <rect key="frame" x="0.0" y="100" width="375" height="467"/>
+                                <color key="backgroundColor" systemColor="tertiarySystemGroupedBackgroundColor"/>
+                            </view>
+                            <button hidden="YES" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wUh-Vq-uMw">
+                                <rect key="frame" x="12" y="59" width="80" height="33"/>
+                                <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="18"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Flash ON"/>
+                                <connections>
+                                    <action selector="changeFlashMode:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="p1f-S0-Rmz"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0OI-0T-0Jo">
+                                <rect key="frame" x="322" y="59" width="41" height="33"/>
+                                <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="18"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Auto"/>
+                                <connections>
+                                    <action selector="changeCaptureMode:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="fUE-ao-e8r"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Aje-MG-68t">
+                                <rect key="frame" x="155.5" y="583.5" width="64" height="63"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="5GW-Vz-nPN"/>
+                                    <constraint firstAttribute="width" secondItem="Aje-MG-68t" secondAttribute="height" id="PM3-Zz-Fre"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" backgroundImage="moonphase.full.moon" catalog="system"/>
+                                <connections>
+                                    <action selector="captureTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="CWO-lf-Fgf"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="0OI-0T-0Jo" secondAttribute="trailing" constant="12" id="1Fy-ji-beM"/>
+                            <constraint firstItem="OmE-Vk-hVX" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="8pL-V6-KNG"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="Aje-MG-68t" secondAttribute="bottom" constant="20" id="EzH-5l-BYZ"/>
+                            <constraint firstItem="OmE-Vk-hVX" firstAttribute="top" secondItem="0OI-0T-0Jo" secondAttribute="bottom" constant="8" symbolic="YES" id="GM0-wG-U2t"/>
+                            <constraint firstItem="wUh-Vq-uMw" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="12" id="H1U-mc-cNz"/>
+                            <constraint firstItem="OmE-Vk-hVX" firstAttribute="height" secondItem="5EZ-qb-Rvc" secondAttribute="height" multiplier="0.7" id="Lc1-bK-EjL"/>
+                            <constraint firstItem="OmE-Vk-hVX" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="QLf-cF-UsK"/>
+                            <constraint firstItem="OmE-Vk-hVX" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="eqU-25-IzK"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="OmE-Vk-hVX" secondAttribute="trailing" id="fgn-Al-90O"/>
+                            <constraint firstItem="OmE-Vk-hVX" firstAttribute="top" secondItem="wUh-Vq-uMw" secondAttribute="bottom" constant="8" symbolic="YES" id="hgN-GT-4n3"/>
+                            <constraint firstItem="Aje-MG-68t" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="vYy-5O-bfb"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="captureModeButton" destination="0OI-0T-0Jo" id="pfD-xp-bDq"/>
+                        <outlet property="flashButton" destination="wUh-Vq-uMw" id="ox6-pw-bf0"/>
+                        <outlet property="scannerContainerView" destination="OmE-Vk-hVX" id="x5n-fR-K7Q"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="10" y="4"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="moonphase.full.moon" catalog="system" width="128" height="123"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="tertiarySystemGroupedBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

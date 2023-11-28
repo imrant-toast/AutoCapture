@@ -1,0 +1,553 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0FA7043796C84B8D810FF44B /* Pods_AutoCaptureScanner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11437CD5054B658809DE8D1D /* Pods_AutoCaptureScanner.framework */; };
+		E762F2EA2B0F39AB001275EA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E762F2E92B0F39AB001275EA /* AppDelegate.swift */; };
+		E762F2EC2B0F39AB001275EA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E762F2EB2B0F39AB001275EA /* SceneDelegate.swift */; };
+		E762F2EE2B0F39AB001275EA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E762F2ED2B0F39AB001275EA /* ViewController.swift */; };
+		E762F2F12B0F39AB001275EA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E762F2EF2B0F39AB001275EA /* Main.storyboard */; };
+		E762F2F32B0F39AC001275EA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E762F2F22B0F39AC001275EA /* Assets.xcassets */; };
+		E762F2F62B0F39AC001275EA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E762F2F42B0F39AC001275EA /* LaunchScreen.storyboard */; };
+		E762F2FF2B0F39FC001275EA /* WeScan in Frameworks */ = {isa = PBXBuildFile; productRef = E762F2FE2B0F39FC001275EA /* WeScan */; };
+		E762F3012B0F3CE0001275EA /* WeScanController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E762F3002B0F3CE0001275EA /* WeScanController.swift */; };
+		E762F3032B0F3CEA001275EA /* WeScan.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E762F3022B0F3CEA001275EA /* WeScan.storyboard */; };
+		E762F3052B0F4AD6001275EA /* ReviewScanController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E762F3042B0F4AD6001275EA /* ReviewScanController.swift */; };
+		E762F3072B0F4ADE001275EA /* ReviewScan.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E762F3062B0F4ADE001275EA /* ReviewScan.storyboard */; };
+		E7C957E62B1076C600455287 /* ScanbotDocumentScannerSDK in Frameworks */ = {isa = PBXBuildFile; productRef = E7C957E52B1076C600455287 /* ScanbotDocumentScannerSDK */; };
+		E7C957EA2B1077B900455287 /* ScanBotScanningController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C957E92B1077B900455287 /* ScanBotScanningController.swift */; };
+		E7C957EC2B1077BE00455287 /* ScanBotScanning.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7C957EB2B1077BE00455287 /* ScanBotScanning.storyboard */; };
+		E7C957EE2B10A31B00455287 /* ScanBotReviewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C957ED2B10A31B00455287 /* ScanBotReviewController.swift */; };
+		E7C957F02B10A32100455287 /* ScanBotReview.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7C957EF2B10A32100455287 /* ScanBotReview.storyboard */; };
+		E7DA0FA72B14CB0E0024E1F9 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7DA0FA62B14CB0E0024E1F9 /* Constant.swift */; };
+		E7DA0FA92B14D0240024E1F9 /* KlippScannerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7DA0FA82B14D0240024E1F9 /* KlippScannerController.swift */; };
+		E7DA0FAB2B14D0300024E1F9 /* KlippaScanner.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7DA0FAA2B14D0300024E1F9 /* KlippaScanner.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		11437CD5054B658809DE8D1D /* Pods_AutoCaptureScanner.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AutoCaptureScanner.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A5FA740F215C9EA587390637 /* Pods-AutoCaptureScanner.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AutoCaptureScanner.debug.xcconfig"; path = "Target Support Files/Pods-AutoCaptureScanner/Pods-AutoCaptureScanner.debug.xcconfig"; sourceTree = "<group>"; };
+		D9B8985101CA1BD17B6AC755 /* Pods-AutoCaptureScanner.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AutoCaptureScanner.release.xcconfig"; path = "Target Support Files/Pods-AutoCaptureScanner/Pods-AutoCaptureScanner.release.xcconfig"; sourceTree = "<group>"; };
+		E762F2E62B0F39AB001275EA /* AutoCaptureScanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AutoCaptureScanner.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E762F2E92B0F39AB001275EA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		E762F2EB2B0F39AB001275EA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		E762F2ED2B0F39AB001275EA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E762F2F02B0F39AB001275EA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		E762F2F22B0F39AC001275EA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E762F2F52B0F39AC001275EA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		E762F2F72B0F39AC001275EA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E762F3002B0F3CE0001275EA /* WeScanController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeScanController.swift; sourceTree = "<group>"; };
+		E762F3022B0F3CEA001275EA /* WeScan.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WeScan.storyboard; sourceTree = "<group>"; };
+		E762F3042B0F4AD6001275EA /* ReviewScanController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewScanController.swift; sourceTree = "<group>"; };
+		E762F3062B0F4ADE001275EA /* ReviewScan.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ReviewScan.storyboard; sourceTree = "<group>"; };
+		E7C957E92B1077B900455287 /* ScanBotScanningController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanBotScanningController.swift; sourceTree = "<group>"; };
+		E7C957EB2B1077BE00455287 /* ScanBotScanning.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ScanBotScanning.storyboard; sourceTree = "<group>"; };
+		E7C957ED2B10A31B00455287 /* ScanBotReviewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanBotReviewController.swift; sourceTree = "<group>"; };
+		E7C957EF2B10A32100455287 /* ScanBotReview.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ScanBotReview.storyboard; sourceTree = "<group>"; };
+		E7DA0FA62B14CB0E0024E1F9 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		E7DA0FA82B14D0240024E1F9 /* KlippScannerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KlippScannerController.swift; sourceTree = "<group>"; };
+		E7DA0FAA2B14D0300024E1F9 /* KlippaScanner.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = KlippaScanner.storyboard; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E762F2E32B0F39AB001275EA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E7C957E62B1076C600455287 /* ScanbotDocumentScannerSDK in Frameworks */,
+				E762F2FF2B0F39FC001275EA /* WeScan in Frameworks */,
+				0FA7043796C84B8D810FF44B /* Pods_AutoCaptureScanner.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		09F68042F9B1A1CD40EBF0A9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A5FA740F215C9EA587390637 /* Pods-AutoCaptureScanner.debug.xcconfig */,
+				D9B8985101CA1BD17B6AC755 /* Pods-AutoCaptureScanner.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		7B4FCED7BF30A2CE105D0E2A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				11437CD5054B658809DE8D1D /* Pods_AutoCaptureScanner.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E762F2DD2B0F39AB001275EA = {
+			isa = PBXGroup;
+			children = (
+				E762F2E82B0F39AB001275EA /* AutoCaptureScanner */,
+				E762F2E72B0F39AB001275EA /* Products */,
+				09F68042F9B1A1CD40EBF0A9 /* Pods */,
+				7B4FCED7BF30A2CE105D0E2A /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		E762F2E72B0F39AB001275EA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E762F2E62B0F39AB001275EA /* AutoCaptureScanner.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E762F2E82B0F39AB001275EA /* AutoCaptureScanner */ = {
+			isa = PBXGroup;
+			children = (
+				E762F2E92B0F39AB001275EA /* AppDelegate.swift */,
+				E762F2EB2B0F39AB001275EA /* SceneDelegate.swift */,
+				E762F2ED2B0F39AB001275EA /* ViewController.swift */,
+				E7DA0FAC2B14D0330024E1F9 /* Klippa */,
+				E7C957E82B1077A200455287 /* ScanBot */,
+				E7C957E72B10779700455287 /* WeScan */,
+				E762F2EF2B0F39AB001275EA /* Main.storyboard */,
+				E762F2F22B0F39AC001275EA /* Assets.xcassets */,
+				E762F2F42B0F39AC001275EA /* LaunchScreen.storyboard */,
+				E762F2F72B0F39AC001275EA /* Info.plist */,
+				E7DA0FA62B14CB0E0024E1F9 /* Constant.swift */,
+			);
+			path = AutoCaptureScanner;
+			sourceTree = "<group>";
+		};
+		E7C957E72B10779700455287 /* WeScan */ = {
+			isa = PBXGroup;
+			children = (
+				E762F3042B0F4AD6001275EA /* ReviewScanController.swift */,
+				E762F3062B0F4ADE001275EA /* ReviewScan.storyboard */,
+				E762F3002B0F3CE0001275EA /* WeScanController.swift */,
+				E762F3022B0F3CEA001275EA /* WeScan.storyboard */,
+			);
+			path = WeScan;
+			sourceTree = "<group>";
+		};
+		E7C957E82B1077A200455287 /* ScanBot */ = {
+			isa = PBXGroup;
+			children = (
+				E7C957E92B1077B900455287 /* ScanBotScanningController.swift */,
+				E7C957EB2B1077BE00455287 /* ScanBotScanning.storyboard */,
+				E7C957ED2B10A31B00455287 /* ScanBotReviewController.swift */,
+				E7C957EF2B10A32100455287 /* ScanBotReview.storyboard */,
+			);
+			path = ScanBot;
+			sourceTree = "<group>";
+		};
+		E7DA0FAC2B14D0330024E1F9 /* Klippa */ = {
+			isa = PBXGroup;
+			children = (
+				E7DA0FA82B14D0240024E1F9 /* KlippScannerController.swift */,
+				E7DA0FAA2B14D0300024E1F9 /* KlippaScanner.storyboard */,
+			);
+			path = Klippa;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E762F2E52B0F39AB001275EA /* AutoCaptureScanner */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E762F2FA2B0F39AC001275EA /* Build configuration list for PBXNativeTarget "AutoCaptureScanner" */;
+			buildPhases = (
+				DAEEC1C3625A1A4E9AB05E0C /* [CP] Check Pods Manifest.lock */,
+				E762F2E22B0F39AB001275EA /* Sources */,
+				E762F2E32B0F39AB001275EA /* Frameworks */,
+				E762F2E42B0F39AB001275EA /* Resources */,
+				E6800F4ABB69BCAEEDAC8B75 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AutoCaptureScanner;
+			packageProductDependencies = (
+				E762F2FE2B0F39FC001275EA /* WeScan */,
+				E7C957E52B1076C600455287 /* ScanbotDocumentScannerSDK */,
+			);
+			productName = AutoCaptureScanner;
+			productReference = E762F2E62B0F39AB001275EA /* AutoCaptureScanner.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E762F2DE2B0F39AB001275EA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1430;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					E762F2E52B0F39AB001275EA = {
+						CreatedOnToolsVersion = 14.3.1;
+					};
+				};
+			};
+			buildConfigurationList = E762F2E12B0F39AB001275EA /* Build configuration list for PBXProject "AutoCaptureScanner" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E762F2DD2B0F39AB001275EA;
+			packageReferences = (
+				E762F2FD2B0F39FC001275EA /* XCRemoteSwiftPackageReference "WeScan" */,
+				E7C957E42B1076C600455287 /* XCRemoteSwiftPackageReference "scanbot-document-scanner-sdk-ios-spm" */,
+			);
+			productRefGroup = E762F2E72B0F39AB001275EA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E762F2E52B0F39AB001275EA /* AutoCaptureScanner */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E762F2E42B0F39AB001275EA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E762F2F62B0F39AC001275EA /* LaunchScreen.storyboard in Resources */,
+				E762F3072B0F4ADE001275EA /* ReviewScan.storyboard in Resources */,
+				E7DA0FAB2B14D0300024E1F9 /* KlippaScanner.storyboard in Resources */,
+				E7C957EC2B1077BE00455287 /* ScanBotScanning.storyboard in Resources */,
+				E762F3032B0F3CEA001275EA /* WeScan.storyboard in Resources */,
+				E7C957F02B10A32100455287 /* ScanBotReview.storyboard in Resources */,
+				E762F2F32B0F39AC001275EA /* Assets.xcassets in Resources */,
+				E762F2F12B0F39AB001275EA /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		DAEEC1C3625A1A4E9AB05E0C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AutoCaptureScanner-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E6800F4ABB69BCAEEDAC8B75 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AutoCaptureScanner/Pods-AutoCaptureScanner-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AutoCaptureScanner/Pods-AutoCaptureScanner-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AutoCaptureScanner/Pods-AutoCaptureScanner-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E762F2E22B0F39AB001275EA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E7DA0FA92B14D0240024E1F9 /* KlippScannerController.swift in Sources */,
+				E762F2EE2B0F39AB001275EA /* ViewController.swift in Sources */,
+				E762F2EA2B0F39AB001275EA /* AppDelegate.swift in Sources */,
+				E762F3012B0F3CE0001275EA /* WeScanController.swift in Sources */,
+				E7DA0FA72B14CB0E0024E1F9 /* Constant.swift in Sources */,
+				E7C957EE2B10A31B00455287 /* ScanBotReviewController.swift in Sources */,
+				E762F2EC2B0F39AB001275EA /* SceneDelegate.swift in Sources */,
+				E762F3052B0F4AD6001275EA /* ReviewScanController.swift in Sources */,
+				E7C957EA2B1077B900455287 /* ScanBotScanningController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		E762F2EF2B0F39AB001275EA /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E762F2F02B0F39AB001275EA /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		E762F2F42B0F39AC001275EA /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E762F2F52B0F39AC001275EA /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E762F2F82B0F39AC001275EA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		E762F2F92B0F39AC001275EA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E762F2FB2B0F39AC001275EA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A5FA740F215C9EA587390637 /* Pods-AutoCaptureScanner.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
+				DEVELOPMENT_TEAM = EVVRVEFM64;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = AutoCaptureScanner/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "to scan invoice";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "Please allow access to save photo in your photo library";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "You can select photos to attach to reports.";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mtssoftware.xtrachef;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E762F2FC2B0F39AC001275EA /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D9B8985101CA1BD17B6AC755 /* Pods-AutoCaptureScanner.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
+				DEVELOPMENT_TEAM = EVVRVEFM64;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = AutoCaptureScanner/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "to scan invoice";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "Please allow access to save photo in your photo library";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "You can select photos to attach to reports.";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mtssoftware.xtrachef;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E762F2E12B0F39AB001275EA /* Build configuration list for PBXProject "AutoCaptureScanner" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E762F2F82B0F39AC001275EA /* Debug */,
+				E762F2F92B0F39AC001275EA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E762F2FA2B0F39AC001275EA /* Build configuration list for PBXNativeTarget "AutoCaptureScanner" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E762F2FB2B0F39AC001275EA /* Debug */,
+				E762F2FC2B0F39AC001275EA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		E762F2FD2B0F39FC001275EA /* XCRemoteSwiftPackageReference "WeScan" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/WeTransfer/WeScan.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
+		E7C957E42B1076C600455287 /* XCRemoteSwiftPackageReference "scanbot-document-scanner-sdk-ios-spm" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/doo/scanbot-document-scanner-sdk-ios-spm.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E762F2FE2B0F39FC001275EA /* WeScan */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E762F2FD2B0F39FC001275EA /* XCRemoteSwiftPackageReference "WeScan" */;
+			productName = WeScan;
+		};
+		E7C957E52B1076C600455287 /* ScanbotDocumentScannerSDK */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E7C957E42B1076C600455287 /* XCRemoteSwiftPackageReference "scanbot-document-scanner-sdk-ios-spm" */;
+			productName = ScanbotDocumentScannerSDK;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = E762F2DE2B0F39AB001275EA /* Project object */;
+}

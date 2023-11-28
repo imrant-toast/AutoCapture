@@ -1,0 +1,16 @@
+PODS:
+  - Klippa-Scanner (1.2.0)
+
+DEPENDENCIES:
+  - Klippa-Scanner (from `https://custom-ocr.klippa.com/sdk/ios/specrepo/toast/ktCUIamwcAWyMY8K/KlippaScanner/latest.podspec`)
+
+EXTERNAL SOURCES:
+  Klippa-Scanner:
+    :podspec: https://custom-ocr.klippa.com/sdk/ios/specrepo/toast/ktCUIamwcAWyMY8K/KlippaScanner/latest.podspec
+
+SPEC CHECKSUMS:
+  Klippa-Scanner: 95261765e5ece1730335838ab0b1848bfea453fd
+
+PODFILE CHECKSUM: 046264c8a24ba4d78f83f63b94727600b9de95c7
+
+COCOAPODS: 1.14.3

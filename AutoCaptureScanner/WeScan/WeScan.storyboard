@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--We Scan Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="WeScanController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" customClass="WeScanController" customModule="AutoCaptureScanner" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hyG-8R-4Bt">
+                                <rect key="frame" x="0.0" y="100" width="375" height="467"/>
+                                <color key="backgroundColor" systemColor="tertiarySystemGroupedBackgroundColor"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dye-I2-oD5">
+                                <rect key="frame" x="5" y="57" width="90" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Flash off"/>
+                                <connections>
+                                    <action selector="flashTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="hUh-yo-Pqw"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="drG-1D-u1r">
+                                <rect key="frame" x="307.5" y="57.5" width="59.5" height="34.5"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Auto capture"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Auto"/>
+                                <connections>
+                                    <action selector="captureModeTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="6Vg-V7-Rjk"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2hf-wh-bUL">
+                                <rect key="frame" x="155.5" y="579.5" width="64" height="63"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="DbF-Ye-IQb"/>
+                                    <constraint firstAttribute="width" secondItem="2hf-wh-bUL" secondAttribute="height" id="whq-rm-qj0"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" backgroundImage="moonphase.full.moon" catalog="system"/>
+                                <connections>
+                                    <action selector="captureTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="kxy-uo-ayQ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="hyG-8R-4Bt" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="5l8-Q9-qVr"/>
+                            <constraint firstItem="hyG-8R-4Bt" firstAttribute="top" secondItem="Dye-I2-oD5" secondAttribute="bottom" constant="8" symbolic="YES" id="NDp-EM-faw"/>
+                            <constraint firstItem="hyG-8R-4Bt" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="NM7-cE-nmN"/>
+                            <constraint firstItem="hyG-8R-4Bt" firstAttribute="top" secondItem="drG-1D-u1r" secondAttribute="bottom" constant="8" symbolic="YES" id="Ozv-UW-QtC"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="hyG-8R-4Bt" secondAttribute="trailing" id="awQ-yL-fbh"/>
+                            <constraint firstItem="drG-1D-u1r" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" constant="-8" id="f1O-RC-yoh"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="2hf-wh-bUL" secondAttribute="bottom" constant="24" id="hUB-Ic-APX"/>
+                            <constraint firstItem="hyG-8R-4Bt" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="iB3-5p-tkm"/>
+                            <constraint firstItem="Dye-I2-oD5" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="5" id="mWz-bG-vcK"/>
+                            <constraint firstItem="2hf-wh-bUL" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="zDb-ER-pkJ"/>
+                            <constraint firstItem="hyG-8R-4Bt" firstAttribute="height" secondItem="5EZ-qb-Rvc" secondAttribute="height" multiplier="0.7" id="zPL-cn-gtn"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="cameraView" destination="hyG-8R-4Bt" id="X3z-li-DOx"/>
+                        <outlet property="captureButton" destination="2hf-wh-bUL" id="3mK-Qt-fMG"/>
+                        <outlet property="captureModeButton" destination="drG-1D-u1r" id="gi8-ZD-jIE"/>
+                        <outlet property="flashButton" destination="Dye-I2-oD5" id="xGt-Oc-gcZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="140" y="4"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="moonphase.full.moon" catalog="system" width="128" height="123"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="tertiarySystemGroupedBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

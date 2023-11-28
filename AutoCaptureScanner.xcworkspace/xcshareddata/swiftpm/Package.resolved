@@ -1,0 +1,23 @@
+{
+  "pins" : [
+    {
+      "identity" : "scanbot-document-scanner-sdk-ios-spm",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/doo/scanbot-document-scanner-sdk-ios-spm.git",
+      "state" : {
+        "revision" : "3a99d9e92b2a41e0a128da0cbc77e60e88fb103b",
+        "version" : "4.0.0"
+      }
+    },
+    {
+      "identity" : "wescan",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/WeTransfer/WeScan.git",
+      "state" : {
+        "revision" : "5eee784d8233bc209e8fc38980fd847293c96ebc",
+        "version" : "3.0.0"
+      }
+    }
+  ],
+  "version" : 2
+}
