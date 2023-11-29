@@ -50,6 +50,18 @@
                                     <action selector="captureTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="kxy-uo-ayQ"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UGG-Cp-ySD">
+                                <rect key="frame" x="20" y="592" width="45" height="37.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Hmf-fp-pCH"/>
+                                    <constraint firstAttribute="width" secondItem="UGG-Cp-ySD" secondAttribute="height" multiplier="0.9:0.8" id="sgL-oK-MrC"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" backgroundImage="photo.fill" catalog="system"/>
+                                <connections>
+                                    <action selector="imagePickerTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="P1c-yb-7SF"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -63,6 +75,8 @@
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="2hf-wh-bUL" secondAttribute="bottom" constant="24" id="hUB-Ic-APX"/>
                             <constraint firstItem="hyG-8R-4Bt" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="iB3-5p-tkm"/>
                             <constraint firstItem="Dye-I2-oD5" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="5" id="mWz-bG-vcK"/>
+                            <constraint firstItem="UGG-Cp-ySD" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="sEz-ce-6fg"/>
+                            <constraint firstItem="UGG-Cp-ySD" firstAttribute="centerY" secondItem="2hf-wh-bUL" secondAttribute="centerY" id="ua0-mX-JSC"/>
                             <constraint firstItem="2hf-wh-bUL" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="zDb-ER-pkJ"/>
                             <constraint firstItem="hyG-8R-4Bt" firstAttribute="height" secondItem="5EZ-qb-Rvc" secondAttribute="height" multiplier="0.7" id="zPL-cn-gtn"/>
                         </constraints>
@@ -81,6 +95,7 @@
     </scenes>
     <resources>
         <image name="moonphase.full.moon" catalog="system" width="128" height="123"/>
+        <image name="photo.fill" catalog="system" width="128" height="93"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import ScanbotDocumentScannerSDK
+import ScanbotSDK
 import KlippaScanner
 
 class ViewController: UIViewController {
@@ -24,6 +24,8 @@ class ViewController: UIViewController {
     }
     
     @IBAction func redirectToScanBot(_ sender: UIButton) {
+        //startScanningScanBot()
+        //return
         guard Scanbot.isLicenseValid() else {
             let alert = UIAlertController(title: "Tiral mode expired", message: "Trial mode deactivated. Check scanbot.io for info on how to purchase a license", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "Cancel", style: .cancel))
@@ -43,9 +45,9 @@ class ViewController: UIViewController {
             isCropEnabled: true, // auto selection -- > need to set true for auto detection
             isTimerEnabled: true, // auto capture timer -- > need to set true for auto detection
             allowTimer: true, // auto capture time icon -- > need to set true for auto detection
-            userCanRotateImage: false, // after capture rotate
-            userCanCropManually: false, // after capture crop
-            userCanChangeColorSetting: false, // after capure color setting
+            userCanRotateImage: true, // after capture rotate
+            userCanCropManually: true, // after capture crop
+            userCanChangeColorSetting: true, // after capure color setting
             shouldGoToReviewScreenWhenImageLimitReached: false,
             isViewFinderEnabled: true // camera view access area
         )
@@ -102,4 +104,52 @@ extension ViewController: KlippaScannerDelegate {
         }
     }
 }
+
+
+extension ViewController {
+    
+    private func startScanningScanBot() {
+        // Create the default configuration object.
+        let configuration = SBSDKUIDocumentScannerConfiguration.default()
+
+        // Behavior configuration:
+        // e.g. enable multi page mode to scan several documents before processing the result.
+        configuration.behaviorConfiguration.isMultiPageEnabled = false
+        configuration.behaviorConfiguration.isFlashEnabled = false
+        
+        // UI configuration:
+        // e.g. configure various colors.
+        configuration.uiConfiguration.topBarBackgroundColor = UIColor.black
+        configuration.uiConfiguration.topBarButtonsActiveColor = UIColor.black
+        configuration.uiConfiguration.topBarButtonsInactiveColor = UIColor.white.withAlphaComponent(0.3)
+        configuration.uiConfiguration.isFlashButtonHidden = true
+        configuration.uiConfiguration.isMultiPageButtonHidden = true
+        configuration.uiConfiguration.isAutoSnappingButtonHidden = false
+        
+        // Text configuration:
+        // e.g. customize a UI element's text.
+        configuration.textConfiguration.cancelButtonTitle = "Cancel"
+        // Present the recognizer view controller modally on this view controller.
+        SBSDKUIDocumentScannerViewController.present(on: self,
+                                                     with: configuration,
+                                                     andDelegate: self)
+        
+    }
+}
+
+extension ViewController: SBSDKUIDocumentScannerViewControllerDelegate {
+    func scanningViewController(_ viewController: SBSDKUIDocumentScannerViewController,
+                                didFinishWith document: SBSDKUIDocument) {
+        // Process the scanned document.
+    }
+    
+    private func qualityAnalyzer(with image: UIImage, completionHandler: @escaping (_ quality: SBSDKDocumentQuality) -> Swift.Void) {
+        let analyzer = SBSDKDocumentQualityAnalyzer()
+        analyzer.analyze(on: image) { quality in
+            completionHandler(quality)
+        }
+    }
+    
+}
+
 

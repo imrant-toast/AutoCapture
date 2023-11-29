@@ -19,7 +19,6 @@
 		E762F3032B0F3CEA001275EA /* WeScan.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E762F3022B0F3CEA001275EA /* WeScan.storyboard */; };
 		E762F3052B0F4AD6001275EA /* ReviewScanController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E762F3042B0F4AD6001275EA /* ReviewScanController.swift */; };
 		E762F3072B0F4ADE001275EA /* ReviewScan.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E762F3062B0F4ADE001275EA /* ReviewScan.storyboard */; };
-		E7C957E62B1076C600455287 /* ScanbotDocumentScannerSDK in Frameworks */ = {isa = PBXBuildFile; productRef = E7C957E52B1076C600455287 /* ScanbotDocumentScannerSDK */; };
 		E7C957EA2B1077B900455287 /* ScanBotScanningController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C957E92B1077B900455287 /* ScanBotScanningController.swift */; };
 		E7C957EC2B1077BE00455287 /* ScanBotScanning.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7C957EB2B1077BE00455287 /* ScanBotScanning.storyboard */; };
 		E7C957EE2B10A31B00455287 /* ScanBotReviewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C957ED2B10A31B00455287 /* ScanBotReviewController.swift */; };
@@ -27,6 +26,7 @@
 		E7DA0FA72B14CB0E0024E1F9 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7DA0FA62B14CB0E0024E1F9 /* Constant.swift */; };
 		E7DA0FA92B14D0240024E1F9 /* KlippScannerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7DA0FA82B14D0240024E1F9 /* KlippScannerController.swift */; };
 		E7DA0FAB2B14D0300024E1F9 /* KlippaScanner.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7DA0FAA2B14D0300024E1F9 /* KlippaScanner.storyboard */; };
+		E7DA0FAF2B15EBCA0024E1F9 /* ScanbotSDK in Frameworks */ = {isa = PBXBuildFile; productRef = E7DA0FAE2B15EBCA0024E1F9 /* ScanbotSDK */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,8 +59,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E7C957E62B1076C600455287 /* ScanbotDocumentScannerSDK in Frameworks */,
 				E762F2FF2B0F39FC001275EA /* WeScan in Frameworks */,
+				E7DA0FAF2B15EBCA0024E1F9 /* ScanbotSDK in Frameworks */,
 				0FA7043796C84B8D810FF44B /* Pods_AutoCaptureScanner.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -172,7 +172,7 @@
 			name = AutoCaptureScanner;
 			packageProductDependencies = (
 				E762F2FE2B0F39FC001275EA /* WeScan */,
-				E7C957E52B1076C600455287 /* ScanbotDocumentScannerSDK */,
+				E7DA0FAE2B15EBCA0024E1F9 /* ScanbotSDK */,
 			);
 			productName = AutoCaptureScanner;
 			productReference = E762F2E62B0F39AB001275EA /* AutoCaptureScanner.app */;
@@ -204,7 +204,7 @@
 			mainGroup = E762F2DD2B0F39AB001275EA;
 			packageReferences = (
 				E762F2FD2B0F39FC001275EA /* XCRemoteSwiftPackageReference "WeScan" */,
-				E7C957E42B1076C600455287 /* XCRemoteSwiftPackageReference "scanbot-document-scanner-sdk-ios-spm" */,
+				E7DA0FAD2B15EBCA0024E1F9 /* XCRemoteSwiftPackageReference "scanbot-sdk-ios-spm" */,
 			);
 			productRefGroup = E762F2E72B0F39AB001275EA /* Products */;
 			projectDirPath = "";
@@ -526,9 +526,9 @@
 				minimumVersion = 3.0.0;
 			};
 		};
-		E7C957E42B1076C600455287 /* XCRemoteSwiftPackageReference "scanbot-document-scanner-sdk-ios-spm" */ = {
+		E7DA0FAD2B15EBCA0024E1F9 /* XCRemoteSwiftPackageReference "scanbot-sdk-ios-spm" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/doo/scanbot-document-scanner-sdk-ios-spm.git";
+			repositoryURL = "https://github.com/doo/scanbot-sdk-ios-spm.git";
 			requirement = {
 				kind = upToNextMajorVersion;
 				minimumVersion = 4.0.0;
@@ -542,10 +542,10 @@
 			package = E762F2FD2B0F39FC001275EA /* XCRemoteSwiftPackageReference "WeScan" */;
 			productName = WeScan;
 		};
-		E7C957E52B1076C600455287 /* ScanbotDocumentScannerSDK */ = {
+		E7DA0FAE2B15EBCA0024E1F9 /* ScanbotSDK */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = E7C957E42B1076C600455287 /* XCRemoteSwiftPackageReference "scanbot-document-scanner-sdk-ios-spm" */;
-			productName = ScanbotDocumentScannerSDK;
+			package = E7DA0FAD2B15EBCA0024E1F9 /* XCRemoteSwiftPackageReference "scanbot-sdk-ios-spm" */;
+			productName = ScanbotSDK;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

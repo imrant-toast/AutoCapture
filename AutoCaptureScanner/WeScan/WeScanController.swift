@@ -7,6 +7,7 @@
 
 import UIKit
 import WeScan
+import PhotosUI
 
 class WeScanController: UIViewController {
 
@@ -56,9 +57,21 @@ class WeScanController: UIViewController {
         cameraController.isAutoScanEnabled = sender.isSelected
         cameraController.toggleAutoScan()
     }
+    
     @IBAction func flashTapped(_ sender: UIButton) {
         sender.isSelected.toggle()
         cameraController.toggleFlash()
+    }
+    
+    @IBAction func imagePickerTapped(_ sender: UIButton) {
+        if #available(iOS 14.0, *) {
+            var configuration = PHPickerConfiguration()
+            configuration.selectionLimit = 1
+            configuration.filter = .images
+            let picker = PHPickerViewController(configuration: configuration)
+            picker.delegate = self
+            self.present(picker, animated: true)
+        }
     }
 }
 
@@ -77,3 +90,39 @@ extension WeScanController: CameraScannerViewOutputDelegate {
     }
 }
 
+
+extension WeScanController: PHPickerViewControllerDelegate {
+    @available(iOS 14.0, *)
+    func picker(_ picker: PHPickerViewController, didFinishPicking results: [PHPickerResult]) {
+        picker.dismiss(animated: true)
+        let itemProviders = results.map(\.itemProvider)
+        for item in itemProviders {
+            if item.canLoadObject(ofClass: UIImage.self) {
+                item.loadObject(ofClass: UIImage.self) { [weak self] image, error in
+                    guard let self else { return }
+                    if let image = image as? UIImage {
+                        DispatchQueue.main.async {
+                            let imageController = ImageScannerController(image: image, delegate: self)
+                            self.present(imageController, animated: true)
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+extension WeScanController: ImageScannerControllerDelegate {
+    func imageScannerController(_ scanner: WeScan.ImageScannerController, didFinishScanningWithResults results: WeScan.ImageScannerResults) {
+        
+    }
+    
+    func imageScannerControllerDidCancel(_ scanner: WeScan.ImageScannerController) {
+        
+    }
+    
+    func imageScannerController(_ scanner: WeScan.ImageScannerController, didFailWithError error: Error) {
+        
+    }
+    
+}

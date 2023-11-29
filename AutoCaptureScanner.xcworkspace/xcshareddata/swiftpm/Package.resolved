@@ -1,12 +1,12 @@
 {
   "pins" : [
     {
-      "identity" : "scanbot-document-scanner-sdk-ios-spm",
+      "identity" : "scanbot-sdk-ios-spm",
       "kind" : "remoteSourceControl",
-      "location" : "https://github.com/doo/scanbot-document-scanner-sdk-ios-spm.git",
+      "location" : "https://github.com/doo/scanbot-sdk-ios-spm.git",
       "state" : {
-        "revision" : "3a99d9e92b2a41e0a128da0cbc77e60e88fb103b",
-        "version" : "4.0.0"
+        "revision" : "7751cf44d7d2f5a85200b9739aaa852938fb4a2c",
+        "version" : "4.1.0"
       }
     },
     {

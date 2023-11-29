@@ -9,6 +9,6 @@ target 'AutoCaptureScanner' do
 
   # Pods for TestScanner
   pod 'Klippa-Scanner', podspec: 'https://custom-ocr.klippa.com/sdk/ios/specrepo/toast/ktCUIamwcAWyMY8K/KlippaScanner/latest.podspec'
-
+  # pod 'ScanbotSDK'
 
 end

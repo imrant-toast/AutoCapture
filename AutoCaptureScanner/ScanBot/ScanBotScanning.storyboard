@@ -21,11 +21,11 @@
                                 <rect key="frame" x="0.0" y="100" width="375" height="467"/>
                                 <color key="backgroundColor" systemColor="tertiarySystemGroupedBackgroundColor"/>
                             </view>
-                            <button hidden="YES" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wUh-Vq-uMw">
-                                <rect key="frame" x="12" y="59" width="80" height="33"/>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wUh-Vq-uMw">
+                                <rect key="frame" x="12" y="59" width="89" height="33"/>
                                 <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="18"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="Flash ON"/>
+                                <state key="normal" title="Flash OFF"/>
                                 <connections>
                                     <action selector="changeFlashMode:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="p1f-S0-Rmz"/>
                                 </connections>
@@ -51,6 +51,18 @@
                                     <action selector="captureTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="CWO-lf-Fgf"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5MF-h0-ETG">
+                                <rect key="frame" x="22" y="594" width="44" height="41.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="44" id="K9l-Mz-P9c"/>
+                                    <constraint firstAttribute="width" secondItem="5MF-h0-ETG" secondAttribute="height" id="lOv-NI-Zeu"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" backgroundImage="photo.fill" catalog="system"/>
+                                <connections>
+                                    <action selector="loadFromPhotos:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="LuK-5v-f55"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -58,6 +70,7 @@
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="0OI-0T-0Jo" secondAttribute="trailing" constant="12" id="1Fy-ji-beM"/>
                             <constraint firstItem="OmE-Vk-hVX" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="8pL-V6-KNG"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="Aje-MG-68t" secondAttribute="bottom" constant="20" id="EzH-5l-BYZ"/>
+                            <constraint firstItem="5MF-h0-ETG" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="22" id="FAa-ET-GoH"/>
                             <constraint firstItem="OmE-Vk-hVX" firstAttribute="top" secondItem="0OI-0T-0Jo" secondAttribute="bottom" constant="8" symbolic="YES" id="GM0-wG-U2t"/>
                             <constraint firstItem="wUh-Vq-uMw" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="12" id="H1U-mc-cNz"/>
                             <constraint firstItem="OmE-Vk-hVX" firstAttribute="height" secondItem="5EZ-qb-Rvc" secondAttribute="height" multiplier="0.7" id="Lc1-bK-EjL"/>
@@ -65,6 +78,7 @@
                             <constraint firstItem="OmE-Vk-hVX" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="eqU-25-IzK"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="OmE-Vk-hVX" secondAttribute="trailing" id="fgn-Al-90O"/>
                             <constraint firstItem="OmE-Vk-hVX" firstAttribute="top" secondItem="wUh-Vq-uMw" secondAttribute="bottom" constant="8" symbolic="YES" id="hgN-GT-4n3"/>
+                            <constraint firstItem="5MF-h0-ETG" firstAttribute="centerY" secondItem="Aje-MG-68t" secondAttribute="centerY" id="qlE-fE-Ygi"/>
                             <constraint firstItem="Aje-MG-68t" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="vYy-5O-bfb"/>
                         </constraints>
                     </view>
@@ -81,6 +95,7 @@
     </scenes>
     <resources>
         <image name="moonphase.full.moon" catalog="system" width="128" height="123"/>
+        <image name="photo.fill" catalog="system" width="128" height="93"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
