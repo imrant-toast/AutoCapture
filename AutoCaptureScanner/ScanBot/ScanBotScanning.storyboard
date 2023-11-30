@@ -63,29 +63,64 @@
                                     <action selector="loadFromPhotos:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="LuK-5v-f55"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceRightToLeft" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u7b-EN-prt">
+                                <rect key="frame" x="270" y="604.5" width="93" height="21"/>
+                                <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="18"/>
+                                <inset key="imageEdgeInsets" minX="8" minY="3" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="1 Photos" image="greaterthan" catalog="system">
+                                    <color key="titleColor" systemColor="linkColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="reviewTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="KOh-LM-xgb"/>
+                                </connections>
+                            </button>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JMy-zT-v85">
+                                <rect key="frame" x="163" y="61" width="51" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="24" id="nPm-46-cI6"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="modeToggeling:" destination="Y6W-OH-hqX" eventType="valueChanged" id="LWB-0Z-BY6"/>
+                                </connections>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Single Page" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FFB-lD-Tpp">
+                                <rect key="frame" x="155" y="43.5" width="65" height="13.5"/>
+                                <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="12"/>
+                                <color key="textColor" red="1" green="0.14901960780000001" blue="0.2156862745" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="0OI-0T-0Jo" secondAttribute="trailing" constant="12" id="1Fy-ji-beM"/>
+                            <constraint firstItem="u7b-EN-prt" firstAttribute="centerY" secondItem="Aje-MG-68t" secondAttribute="centerY" id="76q-3N-8oO"/>
                             <constraint firstItem="OmE-Vk-hVX" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="8pL-V6-KNG"/>
+                            <constraint firstItem="OmE-Vk-hVX" firstAttribute="top" secondItem="JMy-zT-v85" secondAttribute="bottom" constant="8" symbolic="YES" id="EEi-PQ-uG0"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="Aje-MG-68t" secondAttribute="bottom" constant="20" id="EzH-5l-BYZ"/>
                             <constraint firstItem="5MF-h0-ETG" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="22" id="FAa-ET-GoH"/>
                             <constraint firstItem="OmE-Vk-hVX" firstAttribute="top" secondItem="0OI-0T-0Jo" secondAttribute="bottom" constant="8" symbolic="YES" id="GM0-wG-U2t"/>
                             <constraint firstItem="wUh-Vq-uMw" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="12" id="H1U-mc-cNz"/>
                             <constraint firstItem="OmE-Vk-hVX" firstAttribute="height" secondItem="5EZ-qb-Rvc" secondAttribute="height" multiplier="0.7" id="Lc1-bK-EjL"/>
                             <constraint firstItem="OmE-Vk-hVX" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="QLf-cF-UsK"/>
+                            <constraint firstItem="FFB-lD-Tpp" firstAttribute="centerX" secondItem="JMy-zT-v85" secondAttribute="centerX" id="WyH-hP-DaG"/>
                             <constraint firstItem="OmE-Vk-hVX" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="eqU-25-IzK"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="OmE-Vk-hVX" secondAttribute="trailing" id="fgn-Al-90O"/>
                             <constraint firstItem="OmE-Vk-hVX" firstAttribute="top" secondItem="wUh-Vq-uMw" secondAttribute="bottom" constant="8" symbolic="YES" id="hgN-GT-4n3"/>
+                            <constraint firstItem="JMy-zT-v85" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="iJe-3q-SYL"/>
+                            <constraint firstItem="JMy-zT-v85" firstAttribute="top" secondItem="FFB-lD-Tpp" secondAttribute="bottom" constant="4" id="owl-KF-7I7"/>
                             <constraint firstItem="5MF-h0-ETG" firstAttribute="centerY" secondItem="Aje-MG-68t" secondAttribute="centerY" id="qlE-fE-Ygi"/>
                             <constraint firstItem="Aje-MG-68t" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="vYy-5O-bfb"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="u7b-EN-prt" secondAttribute="trailing" constant="12" id="wx3-Sz-bJc"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="captureModeButton" destination="0OI-0T-0Jo" id="pfD-xp-bDq"/>
                         <outlet property="flashButton" destination="wUh-Vq-uMw" id="ox6-pw-bf0"/>
+                        <outlet property="modeSwitch" destination="JMy-zT-v85" id="h9S-6f-Yjk"/>
+                        <outlet property="reviewButton" destination="u7b-EN-prt" id="Z8V-bv-DUm"/>
                         <outlet property="scannerContainerView" destination="OmE-Vk-hVX" id="x5n-fR-K7Q"/>
+                        <outlet property="typeLabel" destination="FFB-lD-Tpp" id="cS1-9s-gVG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -94,8 +129,12 @@
         </scene>
     </scenes>
     <resources>
+        <image name="greaterthan" catalog="system" width="128" height="108"/>
         <image name="moonphase.full.moon" catalog="system" width="128" height="123"/>
         <image name="photo.fill" catalog="system" width="128" height="93"/>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

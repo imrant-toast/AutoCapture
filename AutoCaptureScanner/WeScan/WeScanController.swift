@@ -46,6 +46,7 @@ class WeScanController: UIViewController {
         cameraController.didMove(toParent: self)
         cameraController.delegate = self
         cameraController.isAutoScanEnabled = true
+        TimingManager.sharedInstance.startTiming()
     }
     
     @IBAction func captureTapped(_ sender: UIButton) {
@@ -82,6 +83,7 @@ extension WeScanController: CameraScannerViewOutputDelegate {
     }
 
     func captureImageSuccess(image: UIImage, withQuad quad: Quadrilateral?) {
+        TimingManager.sharedInstance.retreiveTiming()
         let stroyboard = UIStoryboard(name: "ReviewScan", bundle: nil)
         guard let editController = stroyboard.instantiateViewController(withIdentifier: "ReviewScanController") as? ReviewScanController else { return }
         editController.capturedImage = image

@@ -24,8 +24,6 @@ class ViewController: UIViewController {
     }
     
     @IBAction func redirectToScanBot(_ sender: UIButton) {
-        //startScanningScanBot()
-        //return
         guard Scanbot.isLicenseValid() else {
             let alert = UIAlertController(title: "Tiral mode expired", message: "Trial mode deactivated. Check scanbot.io for info on how to purchase a license", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "Cancel", style: .cancel))
@@ -39,6 +37,7 @@ class ViewController: UIViewController {
     
     
     @IBAction func redirectToklippaScanner(_ sender: UIButton) {
+        TimingManager.sharedInstance.startTiming()
         let license = Constant.KlippaLicenseKey
         
        let klippaMenu = KlippaMenu(
@@ -48,8 +47,8 @@ class ViewController: UIViewController {
             userCanRotateImage: true, // after capture rotate
             userCanCropManually: true, // after capture crop
             userCanChangeColorSetting: true, // after capure color setting
-            shouldGoToReviewScreenWhenImageLimitReached: false,
-            isViewFinderEnabled: true // camera view access area
+            shouldGoToReviewScreenWhenImageLimitReached: true,
+            isViewFinderEnabled: false // camera view access area
         )
         
         let durations = KlippaDurations(
@@ -62,22 +61,66 @@ class ViewController: UIViewController {
             allowShutterButton: true, // Grey out shutter button - disabled state
             hideShutterButton: false // hide and show shutter button.
         )
-                
+        
+        let klippaCameraModes = KlippaCameraModes(
+            modes: [
+                // The document mode for scanning a single-page document.
+                KlippaSingleDocumentMode(
+                    name: "Single Document",
+                    instructions: Instructions(
+                        message: "Single Document Instructions",
+                        dismissHandler: {
+                            print("Single document mode instructions dismissed.")
+                        })
+                ),
+                // The document mode for scanning a document which consists of multiple pages.
+                KlippaMultipleDocumentMode(
+                    name: "Multiple Document",
+                    instructions: Instructions(
+                        message: "Multiple Document Instructions",
+                        dismissHandler: {
+                            print("Multiple document mode instructions dismissed.")
+                        })
+                ),
+                // The document mode for scanning a single-page document with multiple photo captures. Suitable for scanning long receipts.
+                KlippaSegmentedDocumentMode(
+                    name: "Segmented Document",
+                    instructions: Instructions(
+                        message: "Segmented Document Instructions",
+                        dismissHandler: {
+                            print("Segmented document mode instructions dismissed.")
+                        })
+                )
+            ],
+            // The index to set which camera mode will be shown as default.
+            startingIndex: 0)
+        
         let klippaBuilder = KlippaScannerBuilder(builderDelegate: self,
                                                  license: license)
+        
             .klippaMenu(klippaMenu)
             .klippaDurations(durations)
             .klippaShutterbutton(klippaShutterButton)
+            .klippaCameraModes(klippaCameraModes)
         
         klippaBuilder.startScanner(parent: self)
         
         
-       /*switch klippaBuilder.build() {
+      /* switch klippaBuilder.build() {
         case .success(let controller):
             self.present(controller, animated: true)
         case .failure(let error):
             print("ERROR :\(error)")
-        }*/
+        } */
+    }
+    @IBAction func redirectToDefaultScanBot(_ sender: UIButton) {
+        guard Scanbot.isLicenseValid() else {
+            let alert = UIAlertController(title: "Tiral mode expired", message: "Trial mode deactivated. Check scanbot.io for info on how to purchase a license", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Cancel", style: .cancel))
+            present(alert, animated: true)
+            return
+        }
+        self.startScanningScanBot()
     }
 }
 
@@ -89,6 +132,7 @@ extension ViewController: KlippaScannerDelegate {
         print("didFinishScanningWithResult")
         print("multipleDocumentsModeEnabled \(result)")
         print("Scanned \(result.images.count) images")
+        TimingManager.sharedInstance.retreiveTiming()
     }
     
     func klippaScannerDidCancel() {
@@ -119,11 +163,11 @@ extension ViewController {
         
         // UI configuration:
         // e.g. configure various colors.
-        configuration.uiConfiguration.topBarBackgroundColor = UIColor.black
-        configuration.uiConfiguration.topBarButtonsActiveColor = UIColor.black
-        configuration.uiConfiguration.topBarButtonsInactiveColor = UIColor.white.withAlphaComponent(0.3)
-        configuration.uiConfiguration.isFlashButtonHidden = true
-        configuration.uiConfiguration.isMultiPageButtonHidden = true
+        /*configuration.uiConfiguration.topBarBackgroundColor = UIColor.red
+        configuration.uiConfiguration.topBarButtonsActiveColor = UIColor.red
+        configuration.uiConfiguration.topBarButtonsInactiveColor = UIColor.white.withAlphaComponent(0.3)*/
+        configuration.uiConfiguration.isFlashButtonHidden = false
+        configuration.uiConfiguration.isMultiPageButtonHidden = false
         configuration.uiConfiguration.isAutoSnappingButtonHidden = false
         
         // Text configuration:
@@ -141,6 +185,17 @@ extension ViewController: SBSDKUIDocumentScannerViewControllerDelegate {
     func scanningViewController(_ viewController: SBSDKUIDocumentScannerViewController,
                                 didFinishWith document: SBSDKUIDocument) {
         // Process the scanned document.
+        if document.numberOfPages() == 1 {
+            let stroyboard = UIStoryboard(name: "ScanBotReview", bundle: nil)
+            guard let scanBotReviewController = stroyboard.instantiateViewController(withIdentifier: "ScanBotReviewController") as? ScanBotReviewController else { return }
+            scanBotReviewController.originalImage = document.page(at: 0)?.originalImage()
+            scanBotReviewController.polygon = document.page(at: 0)?.polygon
+            self.navigationController?.pushViewController(scanBotReviewController, animated: true)
+        } else {
+            let alert = UIAlertController(title: "Info", message: "Multi page redirection UI not yet completed", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Cancel", style: .cancel))
+            present(alert, animated: true)
+        }
     }
     
     private func qualityAnalyzer(with image: UIImage, completionHandler: @escaping (_ quality: SBSDKDocumentQuality) -> Swift.Void) {
@@ -152,4 +207,20 @@ extension ViewController: SBSDKUIDocumentScannerViewControllerDelegate {
     
 }
 
+
+final class TimingManager {
+    
+    static let sharedInstance = TimingManager()
+    private var lastEventTime = Date()
+    
+    public func startTiming() {
+        lastEventTime = Date()
+    }
+    
+    public func retreiveTiming() {
+        let timeInterval = Date().timeIntervalSince(lastEventTime)
+        print(String(format: "timing_interval_for = %.2f seconds", timeInterval))
+    }
+    
+}
 

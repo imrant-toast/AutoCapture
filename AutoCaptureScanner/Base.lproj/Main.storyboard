@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="4fb-N0-sSO">
-                                <rect key="frame" x="32" y="168" width="311" height="331"/>
+                                <rect key="frame" x="32" y="137.5" width="311" height="392"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tyN-qm-HfZ">
                                         <rect key="frame" x="109.5" y="0.0" width="92" height="37"/>
@@ -47,8 +47,17 @@
                                             <action selector="redirectToScanBot:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1p7-P9-HwL"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="obU-we-Qxy">
+                                        <rect key="frame" x="44.5" y="183" width="222" height="37"/>
+                                        <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="22"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Scanbot.io Default UI"/>
+                                        <connections>
+                                            <action selector="redirectToDefaultScanBot:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GVD-q0-czR"/>
+                                        </connections>
+                                    </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Rc-Dt-Jsj">
-                                        <rect key="frame" x="0.0" y="183" width="311" height="148"/>
+                                        <rect key="frame" x="0.0" y="244" width="311" height="148"/>
                                         <string key="text">Scanbot.io: Trial mode activated: You can now test the document scanner features for 60 seconds. Once the license has expired, you need to close the app and reopen it for testing again.</string>
                                         <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="18"/>
                                         <nil key="textColor"/>
